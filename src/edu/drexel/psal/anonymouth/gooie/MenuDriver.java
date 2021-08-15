@@ -291,7 +291,7 @@ public class MenuDriver {
             	@Override
             	public void actionPerformed(ActionEvent e) { 
             		Logger.logln(NAME+"Fullscreen menu item clicked");
-            		ThePresident.app.requestToggleFullScreen(main);
+                    //ThePresident.app.requestToggleFullScreen(main);
             	}
             };
             main.viewEnterFullScreenMenuItem.addActionListener(fullScreenListener);

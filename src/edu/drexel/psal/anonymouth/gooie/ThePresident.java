@@ -13,9 +13,9 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
-import com.apple.eawt.Application;
-import com.apple.eawt.ApplicationAdapter;
-import com.apple.eawt.ApplicationEvent;
+//import com.apple.eawt.Application;
+//import com.apple.eawt.ApplicationAdapter;
+//import com.apple.eawt.ApplicationEvent;
 
 /**
  * ThePresident sets up the Application and System fields/preferences prior to calling 'GUIMain'
@@ -40,7 +40,7 @@ public class ThePresident {
 	protected static StartWindow startWindow;
 	public GUIMain main;
 	
-	public static Application app; //For OS X
+	//public static Application app; //For OS X
 	public Scanner in = new Scanner(System.in); // xxx just for testing. can be called anywhere in Anonymouth.
 	public static String sessionName = "";
 	public static boolean classifier_Saved = false;
@@ -85,7 +85,7 @@ public class ThePresident {
 			Logger.logln(NAME+"We're on a Mac!");
 			System.setProperty("apple.laf.useScreenMenuBar", "true");
 			
-			app = Application.getApplication();
+			//app = Application.getApplication();
 			//app.setDockIconImage(logo);
 			
 			/**
@@ -130,8 +130,8 @@ public class ThePresident {
 				//}
 			//});
 			
-			app.setEnabledPreferencesMenu(true);
-			app.requestForeground(true);
+			//app.setEnabledPreferencesMenu(true);
+			//app.requestForeground(true);
 		}
 		
 		File log_dir = new File(ANONConstants.LOG_DIR); // create log directory if it doesn't exist.

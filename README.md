@@ -9,6 +9,8 @@ Drexel University, Philadelphia PA<br>
 <http://psal.cs.drexel.edu/>
 
 # Compile and Run
+- This builds and runs on macOS 11.5.2 with M1 Apple Silicon.
+- `brew install java` - this installs OpenJDK compatible with Apple Silicon.
 - From the repository's src directory: `./compile.sh`
 - From the repository root directory: `./run.sh`
 
@@ -61,7 +63,7 @@ Anonymouth requires a corpus (basically a database of other authors and document
 * `./anonymouth/jsan_resources/corpora/drexel_1`
 * `./anonymouth/jsan_resources/enron_demo`
 
-Though we included corpi, you are more than welcome to use any other corpus you may have. It is recommended to use many different combinations of authors so you can get the best posisble picture of where your document stands anonymously with respect to others.
+Though we included corpi, you are more than welcome to use any other corpus you may have. It is recommended to use many different combinations of authors so you can get the best possible picture of where your document stands anonymously with respect to others.
 
 Anonymouth also needs the following jars in the lib directory (everything should already be included):
 

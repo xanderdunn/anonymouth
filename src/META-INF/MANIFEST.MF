@@ -1,1 +1,2 @@
 Main-Class: edu.drexel.psal.anonymouth.gooie.ThePresident
+Class-Path: lib/Jama-1.0.3.jar lib/fasttag_v2.jar lib/jaws-bin.jar lib/jcommon-1.0.17.jar lib/jfreechart-1.0.14.jar lib/jgaap-5.2.0-lite.jar lib/microsoft-translator-java-api-0.6.1-jar-with-dependencies.jar lib/miglayout-4.0-swing.jar lib/org.annolab.tt4j-1.0.15.jar lib/stanford-postagger-2012-01-06.jar lib/ui.jar lib/weka_3_7_9.jar

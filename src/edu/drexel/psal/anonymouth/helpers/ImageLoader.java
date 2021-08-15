@@ -3,6 +3,7 @@ package edu.drexel.psal.anonymouth.helpers;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.io.File;
 
 import javax.imageio.ImageIO;
 import javax.swing.Icon;
@@ -52,7 +53,10 @@ public class ImageLoader {
 		Image image = null;
 
 		try {
-			image = ImageIO.read(ImageLoader.class.getClass().getResource(ANONConstants.GRAPHICS+name));
+            String path = ANONConstants.GRAPHICS + name;
+            Logger.logln("Getting image " + path);
+			//image = ImageIO.read(ImageLoader.class.getClass().getResource(path));
+            image = ImageIO.read(new File(path));
 		} catch (IOException e) {
 			e.printStackTrace();
 			Logger.logln(NAME+"Error loading Image " + name, LogOut.STDERR);

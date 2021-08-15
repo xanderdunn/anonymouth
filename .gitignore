@@ -11,3 +11,4 @@ anonymouth_log
 build.xml
 dist
 /bin
+*.xml
