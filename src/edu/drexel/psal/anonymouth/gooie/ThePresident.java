@@ -28,15 +28,15 @@ public class ThePresident {
 	
 	//Constants
 	private final String NAME = "( "+this.getClass().getSimpleName()+" ) - ";
-	public final String ANONYMOUTH_LOGO = "anonymouth_LOGO.png";
-	public final String ANONYMOUTH_LOGO_LARGE = "anonymouth_LOGO_large.png";
-	public final String ANONYMOUTH_LOGO_SMALL = "anonymouth_gui_chooser.png";
+	//public final String ANONYMOUTH_LOGO = "anonymouth_LOGO.png";
+	//public final String ANONYMOUTH_LOGO_LARGE = "anonymouth_LOGO_large.png";
+	//public final String ANONYMOUTH_LOGO_SMALL = "anonymouth_gui_chooser.png";
 	
 	//Anonymouth Icons
-	public static Image logo;
-	public static ImageIcon aboutLogo;
-	public static ImageIcon dialogLogo;
-	public static Icon dialogIcon;
+	//public static Image logo;
+	//public static ImageIcon aboutLogo;
+    //public static ImageIcon dialogLogo;
+	//public static Icon dialogIcon;
 	protected static StartWindow startWindow;
 	public GUIMain main;
 	
@@ -74,10 +74,10 @@ public class ThePresident {
 		splash = new SplashScreen();
 		splash.showSplashScreen();
 		
-		logo = ImageLoader.getImage(ANONYMOUTH_LOGO_LARGE);
-		aboutLogo = ImageLoader.getImageIcon(ANONYMOUTH_LOGO);
-		dialogLogo = ImageLoader.getImageIcon(ANONYMOUTH_LOGO_SMALL);
-		dialogIcon = ImageLoader.getIcon(ANONYMOUTH_LOGO_SMALL);
+		//logo = ImageLoader.getImage(ANONYMOUTH_LOGO_LARGE);
+		//aboutLogo = ImageLoader.getImageIcon(ANONYMOUTH_LOGO);
+		//dialogLogo = ImageLoader.getImageIcon(ANONYMOUTH_LOGO_SMALL);
+		//dialogIcon = ImageLoader.getIcon(ANONYMOUTH_LOGO_SMALL);
 		
 		if (ANONConstants.IS_MAC) {
 			System.setProperty("WEKA_HOME", "/dev/null");
@@ -86,49 +86,49 @@ public class ThePresident {
 			System.setProperty("apple.laf.useScreenMenuBar", "true");
 			
 			app = Application.getApplication();
-			app.setDockIconImage(logo);
+			//app.setDockIconImage(logo);
 			
 			/**
 			 * The best method I've found yet for handling the OS X menu look and feel, everything works perfectly.
 			 */
-			app.addApplicationListener(new ApplicationAdapter() {
-				@Override
-				public void handleQuit(ApplicationEvent e) {
-					if (PropertiesUtil.getWarnQuit() && !main.documentSaved) {
-						main.toFront();
-						main.requestFocus();
-						int confirm = JOptionPane.showOptionDialog(null,
-								"Are You Sure to Close Application?\nYou will lose all unsaved changes.",
-								"Unsaved Changes Warning",
-								JOptionPane.YES_NO_OPTION,
-								JOptionPane.QUESTION_MESSAGE,
-								null, null, null);
-						if (confirm == 0) {
-							System.exit(0);
-						}
-					} else if (PropertiesUtil.getAutoSave()) {
-						main.menuDriver.save(GUIMain.inst);
-						System.exit(0);
-					} else {
-						System.exit(0);
-					}
-				}
+			//app.addApplicationListener(new ApplicationAdapter() {
+				//@Override
+				//public void handleQuit(ApplicationEvent e) {
+					//if (PropertiesUtil.getWarnQuit() && !main.documentSaved) {
+						//main.toFront();
+						//main.requestFocus();
+						//int confirm = JOptionPane.showOptionDialog(null,
+								//"Are You Sure to Close Application?\nYou will lose all unsaved changes.",
+								//"Unsaved Changes Warning",
+								//JOptionPane.YES_NO_OPTION,
+								//JOptionPane.QUESTION_MESSAGE,
+								//null, null, null);
+						//if (confirm == 0) {
+							//System.exit(0);
+						//}
+					//} else if (PropertiesUtil.getAutoSave()) {
+						//main.menuDriver.save(GUIMain.inst);
+						//System.exit(0);
+					//} else {
+						//System.exit(0);
+					//}
+				//}
 				
-				@Override
-				public void handleAbout(ApplicationEvent e) {
-					e.setHandled(true); //Tells the system to not display their own "About" window since we've got this covered.
-					JOptionPane.showMessageDialog(null, 
-							About.aboutAnonymouth,
-							"About Anonymouth",
-							JOptionPane.INFORMATION_MESSAGE,
-							aboutLogo);
-				}
+				//@Override
+				//public void handleAbout(ApplicationEvent e) {
+					//e.setHandled(true); //Tells the system to not display their own "About" window since we've got this covered.
+					//JOptionPane.showMessageDialog(null, 
+							//About.aboutAnonymouth,
+							//"About Anonymouth",
+							//JOptionPane.INFORMATION_MESSAGE,
+							//aboutLogo);
+				//}
 				
-				@Override
-				public void handlePreferences(ApplicationEvent e) {
-					main.preferencesWindow.showWindow();
-				}
-			});
+				//@Override
+				//public void handlePreferences(ApplicationEvent e) {
+					//main.preferencesWindow.showWindow();
+				//}
+			//});
 			
 			app.setEnabledPreferencesMenu(true);
 			app.requestForeground(true);

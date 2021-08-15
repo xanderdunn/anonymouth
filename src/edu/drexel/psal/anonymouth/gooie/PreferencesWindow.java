@@ -80,7 +80,7 @@ public class PreferencesWindow extends JFrame implements WindowListener {
 	private void init(final GUIMain main) {
 		this.setTitle("Preferences");
 		this.main = main;
-		this.setIconImage(ThePresident.logo);
+		//this.setIconImage(ThePresident.logo);
 		
 		preferencesDriver = new PreferencesDriver(main, this);
 		preferencesWindow = this;

@@ -163,7 +163,7 @@ import java.util.*;
 // on the code, I strongly suggest looking at MersenneTwister.java first.
 // -- Sean
 
-public strictfp class MersenneTwisterFast implements Serializable, Cloneable
+public class MersenneTwisterFast implements Serializable, Cloneable
     {
     // Serialization
     private static final long serialVersionUID = -8219700664442619525L;  // locked as of Version 15

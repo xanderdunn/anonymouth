@@ -198,7 +198,7 @@ public class PreProcessAdvancedWindow extends JDialog {
 		this.setLocationRelativeTo(null); // makes it form in the center of the screen
 		this.setResizable(false);
 		this.setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
-		this.setIconImage(ThePresident.logo);
+		//this.setIconImage(ThePresident.logo);
 	}
 
 	/**

@@ -332,7 +332,7 @@ public class PreProcessDriver {
 									"An older file named \""+file.getName()+"\" already exists in your\n" +
 									"documents. Do you want to replace it with the new one you're moving?",
 									"Duplicate Name",
-									JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, ThePresident.dialogLogo,
+									JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null,
 									duplicateName, "Replace");
 							
 							if (response == REPLACE) {
@@ -543,7 +543,7 @@ public class PreProcessDriver {
 												"containing just txt files",
 												"Directories Skipped", 
 												JOptionPane.WARNING_MESSAGE,
-												ThePresident.dialogLogo);
+												null);
 										directoryMessageShown = true;
 									}
 									
@@ -613,7 +613,7 @@ public class PreProcessDriver {
 						JOptionPane.showMessageDialog(null,
 								"Didn't load the following documents:"+skipList,
 								"Documents Skipped",
-								JOptionPane.WARNING_MESSAGE, ThePresident.dialogLogo);
+								JOptionPane.WARNING_MESSAGE, null);
 						Logger.logln(NAME+"Skipped the following training documents:"+skipList);
 					}
 
@@ -907,7 +907,7 @@ public class PreProcessDriver {
 						removingAll = true;
 						DefaultMutableTreeNode root = (DefaultMutableTreeNode)paths[0].getPath()[0];
 						@SuppressWarnings("unchecked")
-						Enumeration<DefaultMutableTreeNode> authors = root.children();
+						Enumeration<DefaultMutableTreeNode> authors = (Enumeration<DefaultMutableTreeNode>)(Object)root.children();
 						while (authors.hasMoreElements())
 							selectedDocs.add(authors.nextElement());
 					} else if (paths[0].getPath().length == 2) { //Deleting author and all their documents
@@ -995,7 +995,7 @@ public class PreProcessDriver {
 				"An older file named \""+name+"\" already exists in author\n" +
 				"\""+author+"\"'s documents. Do you want to replace it with the new one you're moving?",
 				"Duplicate Name",
-				JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, ThePresident.dialogLogo,
+				JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null,
 				duplicateName, "Replace");
 		
 		if (confirm == REPLACE) { //Replace

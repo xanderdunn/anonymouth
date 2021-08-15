@@ -169,7 +169,7 @@ public class MenuDriver {
 						About.aboutAnonymouth,
 						"About Anonymouth",
 						JOptionPane.INFORMATION_MESSAGE,
-						ThePresident.aboutLogo);
+						null);
         	}
         };
         main.helpAboutMenuItem.addActionListener(aboutListener);

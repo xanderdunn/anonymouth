@@ -445,7 +445,7 @@ public class StartWindow extends JFrame {
 							"   -The document no longer has read permissions\n" +
 							"   -The document is not empty, where it wasn't in the past",
 							"Problems with Loading Document Set",
-							JOptionPane.WARNING_MESSAGE, ThePresident.dialogLogo);
+							JOptionPane.WARNING_MESSAGE);
 					setReadyToStart(true, true);
 					ThePresident.canDoQuickStart = true;
 				} else {
@@ -457,7 +457,7 @@ public class StartWindow extends JFrame {
 							"   -The document no longer has read permissions\n" +
 							"   -The document is not empty, where it wasn't in the past",
 							"Problems with Loading Document Set",
-							JOptionPane.WARNING_MESSAGE, ThePresident.dialogLogo);
+							JOptionPane.WARNING_MESSAGE);
 					Logger.logln(NAME+"One or more parts of the loaded doc set are insufficient now to begin due to" +
 							"loading problems, cannot quick start");
 					setReadyToStart(false, true);

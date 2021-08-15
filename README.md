@@ -8,6 +8,9 @@ The Privacy, Security and Automation Lab (PSAL)<br>
 Drexel University, Philadelphia PA<br>
 <http://psal.cs.drexel.edu/>
 
+# Compile and Run
+- From the repository's src directory: `./compile.sh`
+- From the repository root directory: `./run.sh`
 
 #Index
 1. Set Up

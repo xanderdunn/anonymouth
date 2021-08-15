@@ -68,7 +68,7 @@ public class DictionaryBinding {
 						"just 'http://www.google.com' it.",
 						"Google.",
 						JOptionPane.PLAIN_MESSAGE,
-						ThePresident.aboutLogo);			
+						null);			
 			}
 		});
 		

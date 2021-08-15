@@ -33,12 +33,12 @@ public class SplashScreen extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private final String NAME = "( SplashScreen) - ";
-	private final String SPLASH_NAME = "anonymouth_SPLASH.png";
+	//private final String SPLASH_NAME = "anonymouth_SPLASH.png";
 	private final int ANIMATION_SPEED = 3;
 	private final int ANIMATION_FRAMES = 50;
 	
 	private int width = 520, height = 135;
-	private Image splashImage;
+	//private Image splashImage;
 	public JLabel progressLabel;
 	public String newText;
 	private JPanel panel;
@@ -63,7 +63,7 @@ public class SplashScreen extends JFrame {
 		this.setVisible(false);
 		
 		splashScreen = this;
-		splashImage = ImageLoader.getImage(SPLASH_NAME);
+		//splashImage = ImageLoader.getImage(SPLASH_NAME);
 
 		panel = new JPanel(new BorderLayout()) {
 			private static final long serialVersionUID = 1L;
@@ -71,8 +71,8 @@ public class SplashScreen extends JFrame {
 			@Override
 			public void paintComponent(Graphics g) {
 				super.paintComponent(g);
-				Graphics2D g2d = (Graphics2D)g;
-				g2d.drawImage(splashImage, 0, 0, null);
+				//Graphics2D g2d = (Graphics2D)g;
+				//g2d.drawImage(splashImage, 0, 0, null);
 			}
 		};
 

@@ -138,7 +138,7 @@ public class TranslationsDriver implements MouseListener {
 						"</html>",
 						"Translations Help",
 						JOptionPane.INFORMATION_MESSAGE,
-						ThePresident.dialogIcon);
+						null);
 			}
 		};
 		main.translationHelpButton.addActionListener(helpTranslationListener);

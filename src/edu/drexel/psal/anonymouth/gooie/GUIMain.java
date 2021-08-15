@@ -291,7 +291,7 @@ public class GUIMain extends JFrame {
 		this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE); //We're letting the window listener take control of this
 		this.setLocationRelativeTo(null); //Set for in the middle of the screen
 		this.setTitle("Anonymouth");
-		this.setIconImage(ThePresident.logo);
+		//this.setIconImage(ThePresident.logo);
 		this.setMinimumSize(new Dimension(MIN_WIDTH, MIN_HEIGHT));
 		this.setSize(new Dimension((int)(screensize.width*.75), (int)(screensize.height*.75)));
 	}
