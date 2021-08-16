@@ -216,7 +216,9 @@ public class WekaInstancesBuilder {
 					list.add(cfd.createEventSets(knownDocs.get(i)));
 				} catch (Exception e) {
 					Logger.logln("Error extracting features!",LogOut.STDERR);
-					Logger.logln(e.getMessage(),LogOut.STDERR);
+                    System.out.println(e.getMessage());
+                    e.printStackTrace(new java.io.PrintStream(System.out));
+                    System.exit(-1);
 				}
 			}
 		}
@@ -241,7 +243,7 @@ public class WekaInstancesBuilder {
 		known = new ArrayList<List<EventSet>>(knownDocs.size());
 		int knownDocsSize = knownDocs.size();
 		
-		int numCalcThreadsToUse = ThePresident.num_Tagging_Threads;
+        int numCalcThreadsToUse = ThePresident.num_Tagging_Threads;
 		numCalcThreads = numCalcThreadsToUse;
 //		numCalcThreads = getNumCalcThreads();
 //		

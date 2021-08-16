@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import edu.drexel.psal.ANONConstants;
 import edu.stanford.nlp.tagger.maxent.MaxentTagger;
+import edu.drexel.psal.jstylo.generics.Logger;
 
 public class Tagger {
 	
@@ -22,7 +23,9 @@ public class Tagger {
 	public static boolean initTagger(){
 		try {
 			//mt = new MaxentTagger("."+JGAAPConstants.JGAAP_RESOURCE_PACKAGE+"models/postagger/english-left3words-distsim.tagger");
-			mt = new MaxentTagger(ANONConstants.EXTERNAL_RESOURCE_PACKAGE+"english-left3words-distsim.tagger");
+            String path = ANONConstants.EXTERNAL_RESOURCE_PACKAGE + "english-left3words-distsim.tagger";
+            //Logger.logln("Loading MaxentTagger resources from " + path);
+			mt = new MaxentTagger(path);
 			return true;
 		} catch (IOException e) {
 			e.printStackTrace();

@@ -31,7 +31,7 @@ public class FeatureDriver {
 	/**
 	 * The JGAAP event driver to use.
 	 */
-	private EventDriver underlyingEventDriver;
+	public EventDriver underlyingEventDriver;
 	
 	/**
 	 * Defines whether to calculate a value from a histogram generated from the underlying event driver's

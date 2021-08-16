@@ -106,6 +106,7 @@ public class ListEventDriver extends EventDriver {
 
 	@Override
 	public EventSet createEventSet(Document ds) throws EventGenerationException {
+        System.out.println("ListEventDriver calling createEventSet...");
 		
 		String param;
 
@@ -139,16 +140,23 @@ public class ListEventDriver extends EventDriver {
 			String word;
 
 			if (filename != null) {
+                File f = new File(filename);
+                if(f.exists() && !f.isDirectory()) { 
+                    System.out.println("Found filename at " + filename);
+                } else {
+                    System.err.println("filename does not exist at " + filename);
+                }
 				try {
 					try {
 						// look in file system
-						//System.out.println(filename);
+                        System.out.println(filename);
 						br = new BufferedReader(new FileReader(filename));
 					} catch (IOException e) {
 						// look in resources
 						
 						InputStream in = getClass().getClassLoader().getResourceAsStream(filename);
 						br = new BufferedReader(new InputStreamReader(in));
+                        System.err.println("Error reading file "+filename);
 					}
 
 					while ((word = br.readLine()) != null) {

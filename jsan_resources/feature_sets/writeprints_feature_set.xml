@@ -157,7 +157,7 @@
 			<param name="whiteList" value="true"/>
 			<param name="keepLexiconInMem" value="false"/>
 			<param name="underlyingEvents" value="Words"/>
-			<param name="filename" value="edu/drexel/psal/resources/writeprints_special_chars.txt"/>
+            <param name="filename" value="src/edu/drexel/psal/resources/writeprints_special_chars.txt"/>
 		</event-driver>
 		<canonicizers>
 		</canonicizers>
@@ -173,7 +173,7 @@
 			<param name="whiteList" value="true"/>
 			<param name="keepLexiconInMem" value="true"/>
 			<param name="underlyingEvents" value="Words"/>
-			<param name="filename" value="edu/drexel/psal/resources/koppel_function_words.txt"/>
+            <param name="filename" value="src/edu/drexel/psal/resources/koppel_function_words.txt"/>
 		</event-driver>
 		<canonicizers>
 			<canonicizer class="com.jgaap.canonicizers.UnifyCase">
@@ -193,7 +193,7 @@
 			<param name="whiteList" value="true"/>
 			<param name="keepLexiconInMem" value="false"/>
 			<param name="underlyingEvents" value="Characters"/>
-			<param name="filename" value="edu/drexel/psal/resources/writeprints_punctuation.txt"/>
+            <param name="filename" value="src/edu/drexel/psal/resources/writeprints_punctuation.txt"/>
 		</event-driver>
 		<canonicizers>
 		</canonicizers>
@@ -291,7 +291,7 @@
 			<param name="whiteList" value="true"/>
 			<param name="keepLexiconInMem" value="true"/>
 			<param name="underlyingEvents" value="Words"/>
-			<param name="filename" value="edu/drexel/psal/resources/writeprints_misspellings.txt"/>
+            <param name="filename" value="src/edu/drexel/psal/resources/writeprints_misspellings.txt"/>
 		</event-driver>
 		<canonicizers>
 			<canonicizer class="com.jgaap.canonicizers.UnifyCase">

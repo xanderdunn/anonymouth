@@ -11,7 +11,7 @@ import com.jgaap.generics.Canonicizer;
 public class RemoveSpecialKeys extends Canonicizer {
 
 	protected static String SPECIAL_KEYS_PATH =
-			"edu/drexel/psal/resources/special_keys.txt";
+			"src/edu/drexel/psal/resources/special_keys.txt";
 	
 	protected SortedMap<String,String> map = null;
 	

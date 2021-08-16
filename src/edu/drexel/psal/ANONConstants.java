@@ -41,7 +41,7 @@ public class ANONConstants {
 	
 	public static final boolean IS_MAC = System.getProperty("os.name").toLowerCase().contains("mac");
 	public static final boolean IS_USER_STUDY = false; //whether or not to show the session name dialog
-	public static final boolean SHOULD_KEEP_AUTO_SAVED_ORIGINAL_DOC = false;
+	public static final boolean SHOULD_KEEP_AUTO_SAVED_ORIGINAL_DOC = true;
 	public static final boolean SAVE_TAGGED_DOCUMENTS = true; // TODO: Put in Preferences and create implementation for it
 	
 	//Whether or not to show certain components in the GUIs

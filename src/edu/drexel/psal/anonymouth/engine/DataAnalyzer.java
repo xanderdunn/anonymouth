@@ -431,9 +431,7 @@ public class DataAnalyzer{
 			d.setAuthor(ANONConstants.DUMMY_NAME);
 		}
 		
-        Logger.logln(NAME + "here0");
 		magician.initialDocToData(pSet,cfd, classifier);
-        Logger.logln(NAME + "here1");
 		
 		HashMap<String,Double[][]> attribsAndInstances = magician.getPackagedInstanceData();
 		HashMap<String,Instances> simplyInstances = magician.getPackagedFullInstances();

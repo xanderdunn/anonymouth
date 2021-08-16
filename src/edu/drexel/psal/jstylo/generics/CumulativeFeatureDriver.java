@@ -112,6 +112,7 @@ public class CumulativeFeatureDriver {
 	 * @throws Exception 
 	 */
 	public List<EventSet> createEventSets(Document doc) throws Exception {
+        Logger.logln(NAME + "createEventSets on document name " + doc.getTitle() + ", author: " + doc.getAuthor());
 		List<EventSet> esl = new ArrayList<EventSet>();
 		int size = features.size();
 		for (int i = 0; i < size; i++) {
@@ -121,6 +122,7 @@ public class CumulativeFeatureDriver {
 					new Document(doc.getFilePath(),doc.getAuthor(),doc.getTitle());
 			
 			// apply canonicizers
+            Logger.logln(NAME + "calling canonicizers...");
 			try {
 				for (Canonicizer c: features.get(i).getCanonicizers())
 					currDoc.addCanonicizer(c);
@@ -132,15 +134,16 @@ public class CumulativeFeatureDriver {
 			
 			// extract event set
 			String prefix = features.get(i).displayName().replace(" ", "-");
-			EventSet tmpEs = ed.createEventSet(currDoc);
-			tmpEs.setEventSetID(features.get(i).getName()); 
-			EventSet es = new EventSet();
-			es.setAuthor(doc.getAuthor());
-			es.setDocumentName(doc.getTitle());
-			es.setEventSetID(tmpEs.getEventSetID());
-			for (Event e: tmpEs)
-				es.addEvent(new Event(prefix+"{"+e.getEvent()+"}"));
-			esl.add(es);
+            Logger.logln(NAME + "extracting event set with feature driver " + prefix + " " + features.get(i).underlyingEventDriver.getClass().getName());
+            EventSet tmpEs = ed.createEventSet(currDoc);
+            tmpEs.setEventSetID(features.get(i).getName()); 
+            EventSet es = new EventSet();
+            es.setAuthor(doc.getAuthor());
+            es.setDocumentName(doc.getTitle());
+            es.setEventSetID(tmpEs.getEventSetID());
+            for (Event e: tmpEs)
+                es.addEvent(new Event(prefix+"{"+e.getEvent()+"}"));
+            esl.add(es);
 		}
 		return esl;
 	}
