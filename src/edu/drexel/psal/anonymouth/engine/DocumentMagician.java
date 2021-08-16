@@ -222,10 +222,14 @@ public class DocumentMagician {
 	 */
 	public void buildTrainAndToModifyInstances(){
 		Logger.logln(NAME+"Building train (with author) and toModify instances");
+        Logger.logln(NAME + "here0");
 		instanceSet = new InstanceConstructor(isSparse,theseFeaturesCfd,false);
+        Logger.logln(NAME + "here1");
 		int i;
 		int sizeTrainSet = trainSet.size();
+        Logger.logln(NAME + "here2");
 		trainSetAuthors = new HashSet<String>(sizeTrainSet);
+        Logger.logln("There are " + sizeTrainSet + " authors in the train set.");
 		for(i=0;i< sizeTrainSet ;i++){
 			trainSetAuthors.add(trainSet.get(i).getAuthor());
 		}

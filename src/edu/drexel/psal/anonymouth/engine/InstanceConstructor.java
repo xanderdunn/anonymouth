@@ -81,9 +81,13 @@ public class InstanceConstructor {
 	 * @param cfd - cumulative feature driver. Contains all features that will be extracted from the documents
 	 */
 	public InstanceConstructor(boolean isSparse, CumulativeFeatureDriver cfd, boolean printStuff){
+        Logger.logln(NAME + " here0");
 		wid = new WekaInstancesBuilder(isSparse);
+        Logger.logln(NAME + " here1");
 		wid.setNumCalcThreads(ThePresident.num_Tagging_Threads);
+        Logger.logln(NAME + " here2");
 		theseFeaturesCfd = cfd;
+        Logger.logln(NAME + " here3");
 		this.printStuff =printStuff;
 		Logger.logln(NAME+"InstanceConstuctor constructed");
 	}

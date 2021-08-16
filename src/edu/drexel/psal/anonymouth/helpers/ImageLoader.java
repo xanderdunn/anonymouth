@@ -33,8 +33,11 @@ public class ImageLoader {
 	public static ImageIcon getImageIcon(String name) {
 		ImageIcon icon = null;
 
+        String path = ANONConstants.GRAPHICS + name;
 		try {
-			icon = new ImageIcon(ImageLoader.class.getClass().getResource(ANONConstants.GRAPHICS+name));
+			//icon = new ImageIcon(ImageLoader.class.getClass().getResource(ANONConstants.GRAPHICS+name));
+            Logger.logln(NAME + "Loading image icon " + path);
+			icon = new ImageIcon(path);
 		} catch (Exception e) {
 			Logger.logln(NAME+"Error loading Image Icon " + name, LogOut.STDERR);
 		}
@@ -54,7 +57,7 @@ public class ImageLoader {
 
 		try {
             String path = ANONConstants.GRAPHICS + name;
-            Logger.logln("Getting image " + path);
+            Logger.logln(NAME + "Getting image " + path);
 			//image = ImageIO.read(ImageLoader.class.getClass().getResource(path));
             image = ImageIO.read(new File(path));
 		} catch (IOException e) {
@@ -96,7 +99,10 @@ public class ImageLoader {
 		Icon icon = null;
 
 		try {
-			icon = new ImageIcon(ImageLoader.class.getClass().getResource(ANONConstants.GRAPHICS+name));
+			//icon = new ImageIcon(ImageLoader.class.getClass().getResource(ANONConstants.GRAPHICS+name));
+            String path = ANONConstants.GRAPHICS + name;
+            Logger.logln(NAME + "Loading icon " + path);
+			icon = new ImageIcon(path);
 		} catch (Exception e) {
 			Logger.logln(NAME+"Error loading Image Icon " + name, LogOut.STDERR);
 		}

@@ -927,7 +927,7 @@ public class FeatureWizardDriver {
 					ed = (EventDriver) Class.forName(className).getConstructor().newInstance();
 					map.put(ed.displayName(), className);
 				} catch (Exception e) {
-					Logger.logln(NAME+"- could not add: "+className);
+					Logger.logln(NAME + "- could not add: " + className + ". Exception: " + e);
 				}
 			}
 			edMap.put(set[0],map);

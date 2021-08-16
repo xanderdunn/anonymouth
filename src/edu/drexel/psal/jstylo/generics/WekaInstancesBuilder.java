@@ -167,6 +167,7 @@ public class WekaInstancesBuilder {
 	 * 		Set the representation of the data instances to be sparse (using SparseInstance instead of Instance).
 	 */
 	public WekaInstancesBuilder(boolean isSparse) {
+        Logger.logln(NAME + "Creating WekaInstancesBuilder...");
 		this.isSparse = isSparse;
 	}
 	

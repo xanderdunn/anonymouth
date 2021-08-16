@@ -141,7 +141,7 @@ public class DocumentProcessor {
 				tempDoc = main.documentPane.getText();
 				Logger.logln(NAME+"Process button pressed for first time (initial run) in editor tab");
 
-				pw.setText("Extracting and Clustering Features...");
+				pw.setText("1 - Extracting and Clustering Features...");
 				try {
 					dataAnalyzer.runInitial(documentMagician, main.ppAdvancedDriver.cfd, main.ppAdvancedWindow.classifiers.get(0));
 					pw.setText("Initializing Tagger...");
@@ -166,7 +166,7 @@ public class DocumentProcessor {
 				} else {
 					documentMagician.setModifiedDocument(tempDoc);
 
-					pw.setText("Extracting and Clustering Features...");
+					pw.setText("2 - Extracting and Clustering Features...");
 					try {
 						dataAnalyzer.reRunModified(documentMagician);
 						pw.setText("Initialize Cluster Viewer...");
